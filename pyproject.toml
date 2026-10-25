@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "fraudbench"
+version = "0.1.0"
+description = "Fraud detection benchmarks on the Elliptic Bitcoin dataset"
+requires-python = ">=3.10"
+dependencies = ["torch", "torch_geometric", "xgboost", "scikit-learn", "pandas"]
+
+[project.optional-dependencies]
+dev = ["pytest"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

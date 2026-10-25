@@ -1,0 +1,70 @@
+{
+  "model": "xgboost",
+  "features": "node features only (165)",
+  "split": {
+    "train_time_steps": [
+      1,
+      34
+    ],
+    "test_time_steps": [
+      35,
+      49
+    ],
+    "train_counts": {
+      "illicit": 3462,
+      "licit": 26432
+    },
+    "test_counts": {
+      "illicit": 1083,
+      "licit": 15587
+    }
+  },
+  "params": {
+    "n_estimators": 300,
+    "max_depth": 6,
+    "learning_rate": 0.1,
+    "subsample": 1.0,
+    "colsample_bytree": 1.0,
+    "tree_method": "hist",
+    "eval_metric": "aucpr",
+    "n_jobs": -1,
+    "random_state": 42,
+    "scale_pos_weight": 7.634893125361063
+  },
+  "train_seconds": 10.791990876,
+  "test_metrics": {
+    "threshold": 0.5,
+    "precision": 0.8668122270742358,
+    "recall": 0.7331486611265005,
+    "f1": 0.7943971985992997,
+    "pr_auc": 0.7998508971724003,
+    "roc_auc": 0.9256766935488121,
+    "confusion": {
+      "tp": 794,
+      "fp": 122,
+      "tn": 15465,
+      "fn": 289
+    }
+  },
+  "false_positives_at_80_recall": {
+    "target_recall": 0.8,
+    "threshold": 0.005987375043332577,
+    "achieved_recall": 0.8005540166204986,
+    "false_positives": 1945,
+    "true_positives": 867
+  },
+  "latency": {
+    "mean_ms_per_tx_batched": 0.0008503745710870362,
+    "mean_ms_per_tx_single": 0.5935188189999963,
+    "method": "predict_proba via time.perf_counter. Batched: full test set, 1 warm-up + 10 timed runs, mean total time / n_test. Single: 1000 one-row calls on random test rows, mean per call."
+  },
+  "environment": {
+    "python": "3.12.3",
+    "platform": "Linux-5.15.153.1-microsoft-standard-WSL2-x86_64-with-glibc2.39",
+    "cpu_count": 12,
+    "xgboost": "3.4.1",
+    "sklearn": "1.9.1",
+    "torch": "2.14.1+cpu",
+    "torch_geometric": "2.8.1"
+  }
+}
