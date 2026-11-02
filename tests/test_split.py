@@ -39,3 +39,24 @@ def test_split_real_data():
     check_no_leakage(data.time_step, data.y, split)
     assert set(data.time_step[split.train_idx].tolist()) == set(range(1, 35))
     assert set(data.time_step[split.test_idx].tolist()) == set(TEST_STEPS)
+
+
+def test_feature_groups_partition_all_columns():
+    from fraudbench.data import AGG_COLS, LOCAL_COLS
+
+    assert len(LOCAL_COLS) == 93 and len(AGG_COLS) == 72
+    assert sorted(np.concatenate([LOCAL_COLS, AGG_COLS]).tolist()) == list(range(165))
+
+
+def test_overlapping_steps_rejected():
+    with pytest.raises(ValueError):
+        temporal_split(np.array([30, 31]), np.array([0, 1]), range(1, 31), range(30, 35))
+
+
+def test_validation_split_no_leakage():
+    rng = np.random.default_rng(1)
+    time_step = rng.integers(1, 50, size=5000)
+    y = rng.choice([LICIT, ILLICIT, UNKNOWN], size=5000)
+    split = temporal_split(time_step, y, range(1, 30), range(30, 35))
+    assert set(time_step[split.train_idx].tolist()) <= set(range(1, 30))
+    assert set(time_step[split.test_idx].tolist()) <= set(range(30, 35))

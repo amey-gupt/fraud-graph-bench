@@ -1,0 +1,281 @@
+{
+  "params": {
+    "n_estimators": 300,
+    "max_depth": 6,
+    "learning_rate": 0.1,
+    "subsample": 1.0,
+    "colsample_bytree": 1.0,
+    "tree_method": "hist",
+    "eval_metric": "aucpr",
+    "n_jobs": -1,
+    "random_state": 42,
+    "scale_pos_weight": 7.634893125361063
+  },
+  "feature_groups": {
+    "source": "Weber et al. 2019, arXiv:1908.02591v1, Sec. 2.1.2: first 94 of 166 features are local (incl. time step), remaining 72 are one-hop aggregated.",
+    "pyg_local_cols": [
+      0,
+      92
+    ],
+    "pyg_aggregated_cols": [
+      93,
+      164
+    ]
+  },
+  "per_step": [
+    {
+      "time_step": 35,
+      "threshold": 0.5,
+      "n_illicit": 182,
+      "n_licit": 1159,
+      "precision": 0.9567567567567568,
+      "recall": 0.9725274725274725,
+      "f1": 0.9645776566757494,
+      "tp": 177,
+      "fp": 8,
+      "fn": 5
+    },
+    {
+      "time_step": 36,
+      "threshold": 0.5,
+      "n_illicit": 33,
+      "n_licit": 1675,
+      "precision": 0.75,
+      "recall": 1.0,
+      "f1": 0.8571428571428571,
+      "tp": 33,
+      "fp": 11,
+      "fn": 0
+    },
+    {
+      "time_step": 37,
+      "threshold": 0.5,
+      "n_illicit": 40,
+      "n_licit": 458,
+      "precision": 0.9642857142857143,
+      "recall": 0.675,
+      "f1": 0.7941176470588235,
+      "tp": 27,
+      "fp": 1,
+      "fn": 13
+    },
+    {
+      "time_step": 38,
+      "threshold": 0.5,
+      "n_illicit": 111,
+      "n_licit": 645,
+      "precision": 0.9615384615384616,
+      "recall": 0.9009009009009009,
+      "f1": 0.9302325581395349,
+      "tp": 100,
+      "fp": 4,
+      "fn": 11
+    },
+    {
+      "time_step": 39,
+      "threshold": 0.5,
+      "n_illicit": 81,
+      "n_licit": 1102,
+      "precision": 0.95,
+      "recall": 0.9382716049382716,
+      "f1": 0.9440993788819876,
+      "tp": 76,
+      "fp": 4,
+      "fn": 5
+    },
+    {
+      "time_step": 40,
+      "threshold": 0.5,
+      "n_illicit": 112,
+      "n_licit": 1099,
+      "precision": 0.9367088607594937,
+      "recall": 0.6607142857142857,
+      "f1": 0.774869109947644,
+      "tp": 74,
+      "fp": 5,
+      "fn": 38
+    },
+    {
+      "time_step": 41,
+      "threshold": 0.5,
+      "n_illicit": 116,
+      "n_licit": 1016,
+      "precision": 0.9734513274336283,
+      "recall": 0.9482758620689655,
+      "f1": 0.9606986899563319,
+      "tp": 110,
+      "fp": 3,
+      "fn": 6
+    },
+    {
+      "time_step": 42,
+      "threshold": 0.5,
+      "n_illicit": 239,
+      "n_licit": 1915,
+      "precision": 0.9146919431279621,
+      "recall": 0.8075313807531381,
+      "f1": 0.8577777777777778,
+      "tp": 193,
+      "fp": 18,
+      "fn": 46
+    },
+    {
+      "time_step": 43,
+      "threshold": 0.5,
+      "n_illicit": 24,
+      "n_licit": 1346,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "tp": 0,
+      "fp": 9,
+      "fn": 24
+    },
+    {
+      "time_step": 44,
+      "threshold": 0.5,
+      "n_illicit": 24,
+      "n_licit": 1567,
+      "precision": 0.08,
+      "recall": 0.08333333333333333,
+      "f1": 0.08163265306122448,
+      "tp": 2,
+      "fp": 23,
+      "fn": 22
+    },
+    {
+      "time_step": 45,
+      "threshold": 0.5,
+      "n_illicit": 5,
+      "n_licit": 1216,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "tp": 0,
+      "fp": 11,
+      "fn": 5
+    },
+    {
+      "time_step": 46,
+      "threshold": 0.5,
+      "n_illicit": 2,
+      "n_licit": 710,
+      "precision": 0.07692307692307693,
+      "recall": 0.5,
+      "f1": 0.13333333333333333,
+      "tp": 1,
+      "fp": 12,
+      "fn": 1
+    },
+    {
+      "time_step": 47,
+      "threshold": 0.5,
+      "n_illicit": 22,
+      "n_licit": 824,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "tp": 0,
+      "fp": 2,
+      "fn": 22
+    },
+    {
+      "time_step": 48,
+      "threshold": 0.5,
+      "n_illicit": 36,
+      "n_licit": 435,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "tp": 0,
+      "fp": 2,
+      "fn": 36
+    },
+    {
+      "time_step": 49,
+      "threshold": 0.5,
+      "n_illicit": 56,
+      "n_licit": 420,
+      "precision": 0.1,
+      "recall": 0.017857142857142856,
+      "f1": 0.030303030303030304,
+      "tp": 1,
+      "fp": 9,
+      "fn": 55
+    }
+  ],
+  "ablation": {
+    "all_features": {
+      "n_features": 165,
+      "pr_auc": 0.7998508971724003,
+      "f1_at_0.5": 0.7943971985992997,
+      "fp_at_80_recall": {
+        "target_recall": 0.8,
+        "threshold": 0.005987375043332577,
+        "achieved_recall": 0.8005540166204986,
+        "false_positives": 1945,
+        "true_positives": 867
+      }
+    },
+    "local_only": {
+      "n_features": 93,
+      "pr_auc": 0.785492751810565,
+      "f1_at_0.5": 0.7387812942843647,
+      "fp_at_80_recall": {
+        "target_recall": 0.8,
+        "threshold": 0.01581275835633278,
+        "achieved_recall": 0.8005540166204986,
+        "false_positives": 2226,
+        "true_positives": 867
+      }
+    }
+  },
+  "honest_threshold": {
+    "train_steps": [
+      1,
+      29
+    ],
+    "val_steps": [
+      30,
+      34
+    ],
+    "retrain_steps": [
+      1,
+      34
+    ],
+    "test_steps": [
+      35,
+      49
+    ],
+    "val_counts": {
+      "illicit": 591,
+      "licit": 2922
+    },
+    "val_selection": {
+      "target_recall": 0.8,
+      "threshold": 0.807843804359436,
+      "achieved_recall": 0.8003384094754653,
+      "false_positives": 7,
+      "true_positives": 473
+    },
+    "threshold": 0.807843804359436,
+    "test": {
+      "threshold": 0.807843804359436,
+      "n_illicit": 1083,
+      "n_licit": 15587,
+      "precision": 0.9560975609756097,
+      "recall": 0.7239150507848569,
+      "f1": 0.8239621650026274,
+      "tp": 784,
+      "fp": 36,
+      "fn": 299
+    },
+    "oracle_test_fp_at_80_recall": {
+      "target_recall": 0.8,
+      "threshold": 0.005987375043332577,
+      "achieved_recall": 0.8005540166204986,
+      "false_positives": 1945,
+      "true_positives": 867
+    }
+  }
+}

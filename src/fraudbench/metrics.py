@@ -29,6 +29,19 @@ def classification_metrics(y_true: np.ndarray, scores: np.ndarray, threshold: fl
     }
 
 
+def threshold_metrics(y_true: np.ndarray, scores: np.ndarray, threshold: float = 0.5) -> dict:
+    """Precision/recall/F1 at a fixed threshold. Undefined values are None, not 0."""
+    y_pred = scores >= threshold
+    tp = int(np.sum(y_pred & (y_true == 1)))
+    fp = int(np.sum(y_pred & (y_true == 0)))
+    fn = int(np.sum(~y_pred & (y_true == 1)))
+    precision = tp / (tp + fp) if tp + fp else None
+    recall = tp / (tp + fn) if tp + fn else None
+    f1 = 2 * tp / (2 * tp + fp + fn) if tp + fp + fn else None
+    return {"threshold": threshold, "n_illicit": tp + fn, "n_licit": int(np.sum(y_true == 0)),
+            "precision": precision, "recall": recall, "f1": f1, "tp": tp, "fp": fp, "fn": fn}
+
+
 def false_positives_at_recall(y_true: np.ndarray, scores: np.ndarray, target_recall: float = 0.80) -> dict:
     """FPs at the highest threshold whose recall is at least `target_recall`."""
     _, recall, thresholds = precision_recall_curve(y_true, scores)

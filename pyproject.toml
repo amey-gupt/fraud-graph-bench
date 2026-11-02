@@ -7,7 +7,7 @@ name = "fraudbench"
 version = "0.1.0"
 description = "Fraud detection benchmarks on the Elliptic Bitcoin dataset"
 requires-python = ">=3.10"
-dependencies = ["torch", "torch_geometric", "xgboost", "scikit-learn", "pandas"]
+dependencies = ["torch", "torch_geometric", "xgboost", "scikit-learn", "pandas", "matplotlib"]
 
 [project.optional-dependencies]
 dev = ["pytest"]
