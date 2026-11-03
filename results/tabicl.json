@@ -1,0 +1,170 @@
+{
+  "model": "tabicl",
+  "tabicl_version": null,
+  "params": {
+    "allow_auto_download": "True",
+    "average_logits": "True",
+    "batch_size": "1",
+    "checkpoint_version": "tabicl-classifier-v2-20260212.ckpt",
+    "class_shuffle_method": "shift",
+    "device": "cuda",
+    "disk_offload_dir": "None",
+    "feat_shuffle_method": "latin",
+    "inference_config": "None",
+    "kv_cache": "False",
+    "model_path": "None",
+    "n_estimators": "8",
+    "n_jobs": "None",
+    "norm_methods": "None",
+    "offload_mode": "auto",
+    "outlier_threshold": "4.0",
+    "random_state": "42",
+    "softmax_temperature": "0.9",
+    "support_many_classes": "True",
+    "use_amp": "auto",
+    "use_fa3": "auto",
+    "verbose": "True"
+  },
+  "features": "all 165 node features, no scaling (TabICL normalizes internally)",
+  "train_rows": 29894,
+  "test_rows": 16670,
+  "fit_seconds": 9.690713597000013,
+  "inference_seconds_total": 917.318342738,
+  "inference_chunk_size": 1000,
+  "inference_ms_per_tx": 55.02809494529094,
+  "test_metrics": {
+    "threshold": 0.5,
+    "precision": 0.9223416965352449,
+    "recall": 0.7128347183748845,
+    "f1": 0.8041666666666667,
+    "pr_auc": 0.8120055039804901,
+    "roc_auc": 0.9550140956657005,
+    "confusion": {
+      "tp": 772,
+      "fp": 65,
+      "tn": 15522,
+      "fn": 311
+    }
+  },
+  "false_positives_at_80_recall": {
+    "target_recall": 0.8,
+    "threshold": 0.04141484573483467,
+    "achieved_recall": 0.8005540166204986,
+    "false_positives": 1567,
+    "true_positives": 867
+  },
+  "per_step_recall": [
+    {
+      "time_step": 35,
+      "n_illicit": 182,
+      "recall": 0.9835164835164835,
+      "tp": 179,
+      "fn": 3
+    },
+    {
+      "time_step": 36,
+      "n_illicit": 33,
+      "recall": 0.9696969696969697,
+      "tp": 32,
+      "fn": 1
+    },
+    {
+      "time_step": 37,
+      "n_illicit": 40,
+      "recall": 0.7,
+      "tp": 28,
+      "fn": 12
+    },
+    {
+      "time_step": 38,
+      "n_illicit": 111,
+      "recall": 0.9009009009009009,
+      "tp": 100,
+      "fn": 11
+    },
+    {
+      "time_step": 39,
+      "n_illicit": 81,
+      "recall": 0.8518518518518519,
+      "tp": 69,
+      "fn": 12
+    },
+    {
+      "time_step": 40,
+      "n_illicit": 112,
+      "recall": 0.625,
+      "tp": 70,
+      "fn": 42
+    },
+    {
+      "time_step": 41,
+      "n_illicit": 116,
+      "recall": 0.9051724137931034,
+      "tp": 105,
+      "fn": 11
+    },
+    {
+      "time_step": 42,
+      "n_illicit": 239,
+      "recall": 0.7782426778242678,
+      "tp": 186,
+      "fn": 53
+    },
+    {
+      "time_step": 43,
+      "n_illicit": 24,
+      "recall": 0.0,
+      "tp": 0,
+      "fn": 24
+    },
+    {
+      "time_step": 44,
+      "n_illicit": 24,
+      "recall": 0.041666666666666664,
+      "tp": 1,
+      "fn": 23
+    },
+    {
+      "time_step": 45,
+      "n_illicit": 5,
+      "recall": 0.0,
+      "tp": 0,
+      "fn": 5
+    },
+    {
+      "time_step": 46,
+      "n_illicit": 2,
+      "recall": 0.5,
+      "tp": 1,
+      "fn": 1
+    },
+    {
+      "time_step": 47,
+      "n_illicit": 22,
+      "recall": 0.0,
+      "tp": 0,
+      "fn": 22
+    },
+    {
+      "time_step": 48,
+      "n_illicit": 36,
+      "recall": 0.0,
+      "tp": 0,
+      "fn": 36
+    },
+    {
+      "time_step": 49,
+      "n_illicit": 56,
+      "recall": 0.017857142857142856,
+      "tp": 1,
+      "fn": 55
+    }
+  ],
+  "environment": {
+    "platform": "Linux-6.6.159+-x86_64-with-glibc2.39",
+    "cpu_count": 2,
+    "device": "cuda",
+    "gpu_name": "Tesla T4",
+    "batch_size": 1
+  }
+}
