@@ -148,3 +148,11 @@ scripts/          run_baseline.py (XGBoost), run_analysis.py (findings 1-3),
 tests/            test_split.py
 results/          JSON outputs and per_step.png
 ```
+
+## How this was built
+
+I used Claude Code to implement the scripts. I designed the evaluation questions with AI guidance, reviewed every result, and chose what to report.
+
+## Next steps
+
+Some next steps could be to explore training a GNN using the edge list, tuning XGBoost, applying other tabular and relational foundation models, and finding a way to address distribution shift like the time step 43 shutdown.
